@@ -1,8 +1,6 @@
 import React from 'react'
-import { useContext } from 'react'
-import { Navigate, Outlet } from 'react-router-dom'
 import Sidebar from '../../pages/Sidebar'
-import Header from '../Admin/Header'
+
 
 function UserLayout() {
   return (

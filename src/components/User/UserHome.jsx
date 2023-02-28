@@ -2,7 +2,6 @@ import React, { useEffect, useContext, useState } from 'react'
 import AuthContext from '../../context/AuthContext';
 import Axios  from 'axios';
 import { MdDelete } from "react-icons/md";
-// import UserAppDetails from "./UserAppDetails";
 import {
     BackwardIcon
   } from "@heroicons/react/24/outline";
@@ -140,7 +139,7 @@ const UserHome = () => {
                                         </div>
                                         <span className="text-xs leading-none opacity-50"></span>
                                         <p className="text-xs leading-4 pt-2 italic opacity-70 "></p>
-                                        <span className="font-light text-indigo-800  leading-4 opacity-75" onClick={() => { viewdata(list?.id) }}>View in Detail > </span>
+                                        <span className="font-light text-indigo-800  leading-4 opacity-75" onClick={() => { viewdata(list?.id) }}>View in Detail  </span>
                                         {/* <span className="font-light text-blue-500  leading-4 opacity-75" onClick={details} >tap to view more</span> */}
 
                                     </div>

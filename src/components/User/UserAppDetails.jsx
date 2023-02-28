@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import Swal from "sweetalert2";
 import Axios from "axios";
 import { MdDelete } from "react-icons/md";
 import AuthContext from '../../context/AuthContext';
