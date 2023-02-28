@@ -87,17 +87,17 @@ const UserHome = () => {
                 }
             }
         ).then((response) => {
-            console.log("ddddddddddddddddddddddddddddddddddddddddddddddddddddddd", response);
+            console.log("response", response);
             const { data } = response
             setData(data)
-            console.log("fffffffffffffffffffffffffffffffffffffffffff", data);
+            console.log("data", data);
         })
     }
     useEffect(() => {
         getData()
     }, []);
 
-    // //////////////////////////////////
+
 
     const handleFile = (e) => {
         setMessage("");
