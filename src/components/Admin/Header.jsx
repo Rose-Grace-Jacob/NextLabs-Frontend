@@ -1,13 +1,10 @@
 import React, { useContext } from 'react'
 import AuthContext from '../../context/AuthContext'
-import { Navigate, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
 import {
-    CloudArrowUpIcon,
     HomeIcon,
-    UserIcon,
-    ArrowUpOnSquareStackIcon,
     PlusIcon, 
     BackwardIcon
   } from "@heroicons/react/24/outline";

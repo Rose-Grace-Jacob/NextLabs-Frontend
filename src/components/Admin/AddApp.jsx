@@ -1,6 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react'
 import Axios from 'axios';
-import { MdDelete } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import AuthContext from '../../context/AuthContext';
 

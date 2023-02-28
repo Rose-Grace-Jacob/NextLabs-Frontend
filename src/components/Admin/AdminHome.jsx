@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
 import Axios from 'axios';
-import { MdDelete } from "react-icons/md";
 import AuthContext from '../../context/AuthContext';
 
 const AdminHome = () => {
