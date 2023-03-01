@@ -15,7 +15,6 @@ export const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
      
     //base url to pass as context
-    // let baseUrl = 'http://127.0.0.1:8000/'
     const baseUrl = "https://next-labs-backend.vercel.app/";
 
 
@@ -53,31 +52,6 @@ export const AuthProvider = ({children}) => {
         localStorage.removeItem('authTokens')
         navigate('/')
     }
-
-
-    // const updateToken = async ()=> {
-    //     console.log('Update Token Called');
-    //     const response = await fetch('http://127.0.0.1:8000/api/token/refresh/', {
-    //         method: 'POST',
-    //         headers:{
-    //             'Content-Type':'application/json'
-    //         },
-    //         body:JSON.stringify({'refresh':authTokens?.refresh})
-    //     })
-    //     const data = await response.json()
-
-    //     if(response === 200){
-    //         setAuthTokens(data)
-    //         setUser(jwt_decode(data.access))
-    //         localStorage.setItem('authTokens', JSON.stringify(data))
-    //     }else{
-    //         logoutUser()
-    //     }
-
-    //     if(loading){
-    //         setLoading(false)
-    //     }
-    // }
 
     const contextData = {
         user:user,
