@@ -3,7 +3,7 @@ import Axios from 'axios'
 import AuthContext from '../../context/AuthContext'
 
 const UserTasks = () => {
-    let {user,authTokens,baseUrl} = useContext(AuthContext)
+    let { authTokens } = useContext(AuthContext)
     const [taskItems,setTaskItems] = useState([])
 
     useEffect(()=>{

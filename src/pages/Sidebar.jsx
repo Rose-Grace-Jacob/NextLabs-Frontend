@@ -1,10 +1,9 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from '../context/AuthContext';
-import { Navigate, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import { Button } from "@material-tailwind/react";
 import {
-    CloudArrowUpIcon,
     HomeIcon,
     UserIcon,
     ArrowUpOnSquareStackIcon,
@@ -15,9 +14,9 @@ import {
 export default function Sidebar() {
 
     const navigate = useNavigate();
-    const [navbar, setNavbar] = useState(false);
+    // const [navbar, setNavbar] = useState(false);
 
-    let {authTokens, logoutUser, user} = useContext(AuthContext)
+    let { logoutUser } = useContext(AuthContext)
 
     function home() {
         navigate("home");
