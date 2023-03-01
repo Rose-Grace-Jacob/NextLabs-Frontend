@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 
-const baseUrl = "http://127.0.0.1:8000/user/register/";
-
+const baseUrl = "https://next-labs-backend.vercel.app/";
+// https://next-labs-backend.vercel.app/
 const SignUpPage = () => {
 
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ const SignUpPage = () => {
       //   Swal.fire("error", "Something went wrong!");
       // }
   
-      Axios.post(baseUrl, {
+      Axios.post(baseUrl + 'user/register/', {
         username: userData.username,
         email: userData.email,
         password: userData.password,

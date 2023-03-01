@@ -2,15 +2,16 @@ import React, {useState, useEffect, useContext} from 'react'
 import AuthContext from '../../context/AuthContext'
 import Axios from 'axios'
 
+const baseUrl = "https://next-labs-backend.vercel.app/";
 
 const UserPoints = () => {
-    let {user, baseUrl, authTokens} = useContext(AuthContext)
+    let {user, authTokens} = useContext(AuthContext)
     const [userData, setUserData] = useState([])
 
     console.log('my points',user.user_points, user.username);
     useEffect(()=>{
       try {
-          Axios.get('http://127.0.0.1:8000/user/userprofile/',{
+          Axios.get(baseUrl + 'user/userprofile/',{
               headers:{
                   Authorization:`Bearer ${authTokens?.access}`,
                   

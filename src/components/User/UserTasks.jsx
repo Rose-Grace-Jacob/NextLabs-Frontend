@@ -2,13 +2,16 @@ import React, {useState, useContext, useEffect} from 'react'
 import Axios from 'axios'
 import AuthContext from '../../context/AuthContext'
 
+
+const baseUrl = "https://next-labs-backend.vercel.app/";
+
 const UserTasks = () => {
     let { authTokens } = useContext(AuthContext)
     const [taskItems,setTaskItems] = useState([])
 
     useEffect(()=>{
         try {
-            Axios.get('http://127.0.0.1:8000/user/usertasks/',{
+            Axios.get(baseUrl + 'user/usertasks/',{
                 headers:{
                     Authorization:`Bearer ${authTokens?.access}`,
                     "content-type": "application/json"

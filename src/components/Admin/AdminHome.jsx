@@ -2,13 +2,16 @@ import React, { useState, useContext, useEffect } from 'react'
 import Axios from 'axios';
 import AuthContext from '../../context/AuthContext';
 
+
+const baseUrl = "https://next-labs-backend.vercel.app/";
+
 const AdminHome = () => {
-  let { user,baseurl, authTokens } = useContext(AuthContext)
+  let { user, authTokens } = useContext(AuthContext)
   let [data, setData] = useState([])
   
 
   const getData = () => {
-    Axios.get('http://127.0.0.1:8000/user/adminapps/',
+    Axios.get(baseUrl + 'user/adminapps/',
         {
             headers: {
                 Authorization: `Bearer ${authTokens?.access}`,
@@ -17,10 +20,10 @@ const AdminHome = () => {
 
         }
     ).then((response) => {
-        console.log("ddddddddddddddddddddddddddddddddddddddddddddddddddddddd", response);
+        console.log("d", response);
         const { data } = response
         setData(data)
-        console.log("fffffffffffffffffffffffffffffffffffffffffff", data);
+        console.log("data", data);
     })
 
 }

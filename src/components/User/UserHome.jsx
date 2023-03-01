@@ -6,7 +6,7 @@ import {
     BackwardIcon
   } from "@heroicons/react/24/outline";
 
-
+const baseUrl = "https://next-labs-backend.vercel.app/";
 
 const UserHome = () => {
     let { user, authTokens } = useContext(AuthContext)
@@ -53,7 +53,7 @@ const UserHome = () => {
             setMessage("select one image")
         }
         else {
-            Axios.post('http://127.0.0.1:8000/user/completetask/', {
+            Axios.post(baseUrl + 'user/completetask/', {
                 users: user.user_id,
                 image: files[0],
                 app: preloaddata.id
@@ -79,7 +79,7 @@ const UserHome = () => {
 
 
     const getData = () => {
-        Axios.get('http://127.0.0.1:8000/user/showapps',
+        Axios.get(baseUrl + 'user/showapps',
             {
                 headers: {
                     Authorization: `Bearer ${authTokens?.access}`,

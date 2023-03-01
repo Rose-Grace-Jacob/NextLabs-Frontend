@@ -3,10 +3,12 @@ import Axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import AuthContext from '../../context/AuthContext';
 
+const baseUrl = "https://next-labs-backend.vercel.app/";
+
 const AddApp = () => {
 
     const Swal=require("sweetalert2")
-    let { user,baseurl, authTokens  } = useContext(AuthContext)
+    let { user, authTokens  } = useContext(AuthContext)
 	const navigate = useNavigate();
     
     const [userData, setUserData] = useState({
@@ -31,7 +33,7 @@ const AddApp = () => {
         e.preventDefault()
 
         console.log("llllllll",userData);
-        Axios.post('http://127.0.0.1:8000/user/addapps/', 
+        Axios.post(baseUrl + 'user/addapps/', 
             userData,
         
             {
