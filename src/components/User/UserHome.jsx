@@ -6,7 +6,7 @@ import {
     BackwardIcon
   } from "@heroicons/react/24/outline";
 
-const baseUrl = "https://next-labs-backend.vercel.app/";
+const baseUrl = "http://127.0.0.1:8000/";
 
 const UserHome = () => {
     let { user, authTokens } = useContext(AuthContext)

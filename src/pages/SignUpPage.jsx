@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 
-const baseUrl = "https://next-labs-backend.vercel.app/";
+const baseUrl = "http://127.0.0.1:8000/";
 // https://next-labs-backend.vercel.app/
 const SignUpPage = () => {
 

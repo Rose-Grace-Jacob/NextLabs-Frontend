@@ -3,7 +3,7 @@ import axios from "axios";
 import AuthContext from "../../context/AuthContext";
 
 
-const baseUrl = "https://next-labs-backend.vercel.app/";
+const baseUrl = "http://127.0.0.1:8000/";
 
 function UserProfile() {
   let { authTokens, user } = useContext(AuthContext);

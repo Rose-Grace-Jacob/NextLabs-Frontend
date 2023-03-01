@@ -6,8 +6,8 @@ import AuthContext from "../context/AuthContext"
 
 
 
-// const baseURL = 'http://127.0.0.1:8000'
-const baseUrl = "https://next-labs-backend.vercel.app/";
+const baseUrl = 'http://127.0.0.1:8000'
+// const baseUrl = "https://next-labs-backend.vercel.app/";
 
 
 const useAxios = () => {
