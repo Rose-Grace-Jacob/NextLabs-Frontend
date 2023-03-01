@@ -15,7 +15,7 @@ export const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
      
     //base url to pass as context
-    const baseUrl = "http://127.0.0.1:8000/";
+    const baseUrl = "https://rosegracejacob.pythonanywhere.com/";
 
 
     const navigate = useNavigate()

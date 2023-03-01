@@ -6,7 +6,7 @@ import {
     BackwardIcon
   } from "@heroicons/react/24/outline";
 
-const baseUrl = "http://127.0.0.1:8000/";
+const baseUrl = "https://rosegracejacob.pythonanywhere.com/";
 
 const UserHome = () => {
     let { user, authTokens } = useContext(AuthContext)

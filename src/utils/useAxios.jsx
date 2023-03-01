@@ -6,7 +6,7 @@ import AuthContext from "../context/AuthContext"
 
 
 
-const baseUrl = 'http://127.0.0.1:8000'
+const baseUrl = 'https://rosegracejacob.pythonanywhere.com'
 // const baseUrl = "https://next-labs-backend.vercel.app/";
 
 

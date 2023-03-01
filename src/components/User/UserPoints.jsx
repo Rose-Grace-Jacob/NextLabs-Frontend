@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from 'react'
 import AuthContext from '../../context/AuthContext'
 import Axios from 'axios'
 
-const baseUrl = "http://127.0.0.1:8000/";
+const baseUrl = "https://rosegracejacob.pythonanywhere.com/";
 
 const UserPoints = () => {
     let {user, authTokens} = useContext(AuthContext)
