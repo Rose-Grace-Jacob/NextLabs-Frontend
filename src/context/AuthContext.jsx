@@ -15,13 +15,15 @@ export const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
      
     //base url to pass as context
-    let baseUrl = 'http://127.0.0.1:8000/'
+    // let baseUrl = 'http://127.0.0.1:8000/'
+    const baseUrl = "https://next-labs-backend.vercel.app/";
+
 
     const navigate = useNavigate()
 
     const loginUser = async (e) => {
         e.preventDefault() 
-        const response = await fetch('http://127.0.0.1:8000/api/token/', {
+        const response = await fetch(baseUrl + 'api/token/', {
             method: 'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -49,7 +51,7 @@ export const AuthProvider = ({children}) => {
         setAuthTokens(null)
         setUser(null)
         localStorage.removeItem('authTokens')
-        navigate('/login')
+        navigate('/')
     }
 
 
